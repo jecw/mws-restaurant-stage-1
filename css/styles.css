@@ -112,15 +112,15 @@ nav h1 a {
   align-items: center;
 }
 .filter-options h2 {
-  color: white;
+  color: black;
   font-size: 1rem;
   font-weight: normal;
   line-height: 1;
-  margin: 0 20px;
+  margin: 10px 30px;
 }
 .filter-options select {
   background-color: white;
-  border: 1px solid #fff;
+  border: 1px solid black;
   font-family: Arial,sans-serif;
   font-size: 11pt;
   height: 35px;
@@ -142,10 +142,11 @@ nav h1 a {
   background-color: #fff;
   border: 2px solid #ccc;
   font-family: Arial,sans-serif;
-  margin: 15px;
-  min-height: 380px;
-  padding: 0 30px 25px;
-  text-align: left;
+  margin: 0 0 10px;
+  max-height: 100%;
+	max-width: 100%;
+  /* padding: 0 30px 25px; */
+  text-align: center;
   width: 270px;
 }
 #restaurants-list .restaurant-img {
@@ -154,7 +155,7 @@ nav h1 a {
   margin: 0;
   max-width: 100%;
   min-height: 248px;
-  min-width: 100%;
+  min-width: 378px;
 }
 #restaurants-list li h1 {
   color: #f18200;
@@ -176,7 +177,7 @@ nav h1 a {
   color: #fff;
   display: inline-block;
   font-size: 10pt;
-  margin: 15px 0 0;
+  margin: 15px 0 10px;
   padding: 8px 30px 10px;
   text-align: center;
   text-decoration: none;
