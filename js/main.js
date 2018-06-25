@@ -218,15 +218,29 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
-self.addEventListener('install', function(event){
-    event.waitUntil(
-        caches.open('my-cache').then(function(cache) {
-            return cache.addAll([
-                '/',
-                'js/main.js',
-                'img/*jpg'
-            ]
-            );
-        })
-                      );
-                      });
+if (navigator.serviceWorker) {
+  navigator.serviceWorker.register('./js/sw.js');
+  console.log('registering service worker');
+/*
+  self.addEventListener('activate', function(event){
+      event.waitUntil(
+          caches.open('my-cache').then(function(cache) {
+              return cache.addAll([
+                  '/',
+                  'js/',
+                  'img/',
+                  'css/',
+                  'data/'
+              ]
+              );
+          })
+          );
+          });
+  self.addEventListener('fetch', function(event){
+    event.respondWith(
+      fetch(event.request).then(function(response){
+        return response;
+      })
+    );
+  }); */
+} /* end of if statement */
